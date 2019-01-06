@@ -19,6 +19,7 @@ Sandstorm
 General
 1) Pick up hatch panel - Aditi
 - Drive w/ eyes & camera to access port
+- Align w/ color sensor
 - Grab panel from access port
 	- Use suction cups & robot arm
 
@@ -28,10 +29,25 @@ General
 - Align robot w/ tape - zigzag algo (see tape go left, else go right)
 - Attach panel w/ robot arm (release suction cups)
 
-3) Place hatch panel on rocket ship higher level - Ishan
-- Same as Algorithm #2 but use elevator control to attach panel as well as robot arm (release suction cups too)
+3) Place hatch panel on rocket ship higher level - Ankith
+- Same as Algorithm #2 but use elevator control w/ rest of assembly
+
+4) Pick up ball - Ishan
+- Drive w/ eyes & camera to access port
+- Align w/ color sensor
+*Ball rolled onto "support bars"*
+- Close upper support onto ball
+
+5) Drop ball - Wilson
+- Drive w/ eyes & camera to general area of drop
+- Align w/ color sensor
+- Open upper support
+- Push ball out w/ piston
+
+6) Drop ball in rocket ship higher level - Wilson
+- Same as Algorithm #5, but use elevator control w/ rest of assembly
 
 End
-1) Go back to habitat - Wilson
+1) Go back to habitat - Vikrant
 - Drive towards hab (use eyes & camera)
 - Use eyes & camera to get back onto level 1 mat
