@@ -5,33 +5,33 @@ Sandstorm
 - Color sensor pointing down
 - Robot sides parallel to edges of mat
 
-1) Get off the mat
+1) Get off the mat - Vikrant
 - Keep going forward
 - Camera view will tilt down, then become straight again
 - Go another half second or so to get the bumper clear of the Hab Line
 
-2) Attach panel to cargo ship
+2) Attach panel to cargo ship - Ankith
 - Drive to general area of hatch using camera
 - Get color sensor to be above white tape
 - Align robot w/ tape - zigzag algo (see tape go left, else go right)
 - attach panel w/ robot arm (release suction cups)
 
 General
-1) Pick up hatch panel
+1) Pick up hatch panel - Aditi
 - Drive w/ eyes & camera to access port
 - Grab panel from access port
 	- Use suction cups & robot arm
 
-2) Place hatch panel
+2) Place hatch panel - Same code from Sandstorm #2
 - Use camera & eyes to go to general area of hatch
 - Get color sensor to be above white tape
 - Align robot w/ tape - zigzag algo (see tape go left, else go right)
 - Attach panel w/ robot arm (release suction cups)
 
-3) Place hatch panel on rocket ship higher level
+3) Place hatch panel on rocket ship higher level - Ishan
 - Same as Algorithm #2 but use elevator control to attach panel as well as robot arm (release suction cups too)
 
 End
-1) Go back to habitat
+1) Go back to habitat - Wilson
 - Drive towards hab (use eyes & camera)
 - Use eyes & camera to get back onto level 1 mat
