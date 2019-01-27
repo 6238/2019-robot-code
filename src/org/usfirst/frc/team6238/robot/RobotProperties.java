@@ -39,6 +39,22 @@ public class RobotProperties {
     /*
 
     */
+
+    public Joystick getJoystick() {
+        return joystick;
+    }
+
+    public void setJoystick(Joystick joystick) {
+        this.joystick = joystick;
+    }
+
+    public WPI_TalonSRX getFrontLeft() {
+        return frontLeft;
+    }
+
+    public void setFrontLeft(WPI_TalonSRX frontLeft) {
+        this.frontLeft = frontLeft;
+    }
 }
 
 
