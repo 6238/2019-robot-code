@@ -15,6 +15,11 @@ public class RobotProperties {
     private WPI_TalonSRX rearLeft;
     private WPI_TalonSRX rearRight;
 
+    private WPI_TalonSRX elevator1;
+    private WPI_TalonSRX elevator2;
+
+    private WPI_TalonSRX mechanism;
+
     public RobotProperties() {
         joystick = new Joystick(0);
 
@@ -22,6 +27,11 @@ public class RobotProperties {
         frontRight = new WPI_TalonSRX(34);
         rearLeft = new WPI_TalonSRX(35);
         rearRight = new WPI_TalonSRX(36);
+
+        elevator1 = new WPI_TalonSRX(37);
+        elevator2 = new WPI_TalonSRX(38);
+
+        mechanism = new WPI_TalonSRX(39);
     }
     // 4 wheel motors - cims talon srx
     // 2 dual gearboxes - 2 775s each
