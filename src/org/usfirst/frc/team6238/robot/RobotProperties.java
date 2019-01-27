@@ -55,6 +55,30 @@ public class RobotProperties {
     public void setFrontLeft(WPI_TalonSRX frontLeft) {
         this.frontLeft = frontLeft;
     }
+
+    public WPI_TalonSRX getFrontRight() {
+        return frontRight;
+    }
+
+    public void setFrontRight(WPI_TalonSRX frontRight) {
+        this.frontRight = frontRight;
+    }
+
+    public WPI_TalonSRX getRearLeft() {
+        return rearLeft;
+    }
+
+    public void setRearLeft(WPI_TalonSRX rearLeft) {
+        this.rearLeft = rearLeft;
+    }
+
+    public WPI_TalonSRX getRearRight() {
+        return rearRight;
+    }
+
+    public void setRearRight(WPI_TalonSRX rearRight) {
+        this.rearRight = rearRight;
+    }
 }
 
 
