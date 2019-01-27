@@ -72,14 +72,23 @@ public class RobotProperties {
         this.rearLeft = rearLeft;
     }
 
-    public WPI_TalonSRX getRearRight() {
-        return rearRight;
+    public WPI_TalonSRX getElevator1() {
+        return elevator1;
     }
 
-    public void setRearRight(WPI_TalonSRX rearRight) {
-        this.rearRight = rearRight;
+    public void setElevator1(WPI_TalonSRX elevator1) {this.elevator1 = elevator1;}
+
+    public WPI_TalonSRX getElevator2() {
+        return elevator2;
     }
-}
+
+    public void setElevator2(WPI_TalonSRX elevator2) {this.elevator2 = elevator2;}
+
+
+    }
+
+
+
 
 
 
