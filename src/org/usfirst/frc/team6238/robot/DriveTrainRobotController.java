@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.Solenoid;
 import java.math.*;
 
 /**
- * Created by abkhanna on 9/21/18.
+ * Created by imadan on 1/26/19.
  */
 public class DriveTrainRobotController implements RobotController {
     public DriveTrainRobotController() {
@@ -22,16 +22,28 @@ public class DriveTrainRobotController implements RobotController {
         WPI_TalonSRX rearLeft = properties.getRearLeft();
         WPI_TalonSRX rearRight = properties.getRearRight();
 
-        double joyX = properties.joystick.getJoystick().getX();
-        double joyY = properties.joystick.getJoystick().getY();
+        double joyX = properties.joystick.getJoystickX();
+        double joyY = properties.joystick.getJoystickY();
+        double joyZ = properties.joystick.getJoystickZ();
 
         int threshold = 50;
 
         double diagSpeed = Math.sqrt(Math.pow(joyX, 2) + Math.pow(joyY, 2));
         double xSpeed = joyX * 1;
         double ySpeed = joyY * 1;
+        double zSpeed = joyZ * 1;
 
-        if (joyX > threshold && joyY > threshold) {
+        if (joyZ > 0) {
+            frontLeft.set(zSpeed);
+            frontRight.set(-1*zSpeed);
+            rearLeft.set(zSpeed);
+            rearRight.set(-1*zSpeed);
+        } else if (joyZ < 0) {
+            frontLeft.set(-1*zSpeed);
+            frontRight.set(zSpeed);
+            rearLeft.set(-1*zSpeed);
+            rearRight.set(zSpeed);
+        } else if (joyX > threshold && joyY > threshold) {
             frontLeft.set(diagSpeed);
             frontRight.set(0);
             rearLeft.set(0);
@@ -71,6 +83,11 @@ public class DriveTrainRobotController implements RobotController {
             frontRight.set(xSpeed);
             rearLeft.set(xSpeed);
             rearRight.set(-1*xSpeed);
+        } else {
+            frontLeft.set(0);
+            frontRight.set(0);
+            rearLeft.set(0);
+            rearRight.set(0);
         }
 
         return true;
