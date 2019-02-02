@@ -22,8 +22,8 @@ public class DriveTrainRobotController implements RobotController {
         WPI_TalonSRX rearLeft = properties.getRearLeft();
         WPI_TalonSRX rearRight = properties.getRearRight();
 
-        double joyX = properties.getJoystick().getX();
-        double joyY = properties.getJoystick().getY();
+        double joyX = properties.joystick.getJoystick().getX();
+        double joyY = properties.joystick.getJoystick().getY();
 
         int threshold = 50;
 

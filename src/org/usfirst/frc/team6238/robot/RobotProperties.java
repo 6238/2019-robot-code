@@ -4,8 +4,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.*;
 
 public class RobotProperties {
-    private Joystick joystick;
-
+    JoystickController joystick;
 
     private WPI_TalonSRX frontLeft;
     private WPI_TalonSRX frontRight;
@@ -18,7 +17,7 @@ public class RobotProperties {
     private WPI_TalonSRX mechanism;
 
     public RobotProperties() {
-        joystick = new Joystick(0);
+        joystick.port = 0;
 
         frontLeft = new WPI_TalonSRX(33);
         frontRight = new WPI_TalonSRX(34);
@@ -36,14 +35,6 @@ public class RobotProperties {
     /*
 
     */
-
-    public Joystick getJoystick() {
-        return joystick;
-    }
-
-    public void setJoystick(Joystick joystick) {
-        this.joystick = joystick;
-    }
 
     public WPI_TalonSRX getFrontLeft() {
         return frontLeft;
