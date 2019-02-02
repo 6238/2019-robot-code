@@ -1,7 +1,6 @@
 package org.usfirst.frc.team6238.robot;
 
-import edu.wpi.first.wpilibj.Solenoid;
-import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.*;
 
 public class CargoMechanism implements RobotController
 {
@@ -13,7 +12,7 @@ public class CargoMechanism implements RobotController
     {
         cargoBay1 = properties.getCargoBay1();
         cargoBay2 = properties.getCargoBay2();
-        joystick = properties.getJoystick();
+        joystick = properties.joystick;
     }
     public boolean performAction(RobotProperties properties)
     {

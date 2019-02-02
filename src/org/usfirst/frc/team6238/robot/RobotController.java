@@ -1,27 +1,12 @@
 package org.usfirst.frc.team6238.robot;
 
-import edu.wpi.first.wpilibj.CameraServer;
-import edu.wpi.first.wpilibj.IterativeRobot;
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.CameraServer;
-import org.opencv.core.Mat;
-import org.opencv.imgproc.Imgproc;
-import edu.wpi.cscore.CvSink;
-import edu.wpi.cscore.CvSource;
-import edu.wpi.cscore.UsbCamera;
-
-public class VisionControls implements robotController{
-
-    private UsbCamera viewingCamera;
-    private UsbCamera lineTraceCamera;
-
-    public VisionControls(RobotProperties properties)
-    {
-        viewingCamera = properties.getViewingCamera();
-        lineTraceCamera = properties.getLineTraceCamera();
-    }
-    public boolean performAction(RobotProperties properties) {
-
-    }
+public interface RobotController {
+    /**
+     * Perform action will get called for each controller in the list of controllers every time Periodic is called.
+     * You should make sure that the action only happens in the controller settings you care about.
+     * E.g if you only want your action to be enabled when a button is pressed, make sure to check for the button.
+     * @param properties
+     * @return true if your action is performed, and false otherwise.
+     */
+    boolean performAction(RobotProperties properties);
 }
