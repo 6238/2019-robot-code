@@ -16,6 +16,7 @@ package org.usfirst.frc.team6238.robot;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.Encoder;
 
 
 class ElevatorControl implements RobotController
@@ -70,7 +71,21 @@ class ElevatorControl implements RobotController
             m_elevator1.set(0);
             m_elevator2.set(0);
         }
+        Encoder enc;
+        enc = new Encoder(0, 1, false, Encoder.EncodingType.k4X);
+        Encoder sampleEncoder = new Encoder(0, 1, false, Encoder.EncodingType.k4X);
+        sampleEncoder.setMaxPeriod(.1);
+        sampleEncoder.setMinRate(10);
+        sampleEncoder.setDistancePerPulse(5);
+        sampleEncoder.setReverseDirection(true);
+        sampleEncoder.setSamplesToAverage(7);
+        Encoder sampleEncoder = new Encoder(0, 1, false, Encoder.EncodingType.k4X);
+        sampleEncoder.reset();
+
         return true;
-        
+
+
+
+
     }
 }
