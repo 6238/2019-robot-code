@@ -20,8 +20,8 @@ import edu.wpi.first.wpilibj.Joystick;
 
 class ElevatorControl implements RobotController
 {
-    private boolean isDownElevatorButtonpressed;
-    private boolean isUpElevatorButtonPressed;
+
+
 
     public ElevatorControl()
     {
@@ -31,8 +31,24 @@ class ElevatorControl implements RobotController
     @Override
     public boolean performAction(RobotProperties properties)
     {
+        boolean isDownElevatorButtonpressed;
+        boolean isUpElevatorButtonPressed;
         isDownElevatorButtonpressed = properties.joystick.getButtonFour();
         isUpElevatorButtonPressed = properties.joystick.getButtonSix();
+        boolean level1;
+        boolean level2;
+        boolean level3;
+        boolean level4;
+        boolean level5;
+        boolean level6;
+        level1 = properties.joystick.getButtonSeven();
+        level2 = properties.joystick.getButtonEight();
+        level3 = properties.joystick.getButtonNine();
+        level4 = properties.joystick.getButtonTen();
+        level5 = properties.joystick.getButtonEleven();
+        level6 = properties.joystick.getButtonTwelve();
+
+
         WPI_TalonSRX m_elevator1 = properties.getElevator1();
         WPI_TalonSRX m_elevator2 = properties.getElevator2();
         m_elevator1.set(0);
@@ -55,6 +71,6 @@ class ElevatorControl implements RobotController
             m_elevator2.set(0);
         }
         return true;
-
+        
     }
 }
